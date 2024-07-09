@@ -1,0 +1,82 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[english]{babel}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+\usepackage[english]{babel}
+\usepackage{mathtools}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{cite}
+\title{Galois theory solutions}
+\author{saxon.supple }
+\date{July 2024}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{exercise}[theorem]{Exercise}
+
+\begin{document}
+
+\maketitle
+
+\section{Groups}
+
+\subsection{Groups}
+\begin{exercise}
+Suppose That $G$ is a group. Show that the identity element $e$ is unique, and that for each $g\in G$ the inverse element $g^{-1}$ is also unique.
+\end{exercise}
+\begin{proof}
+Let $e_1$ and $e_2$ be identity elements of $G$. Then $e_1=e_1e_2=e_2$ so identity elements are unique.\\
+Let $g_1^{-1}$ and $g_2^{-1}$ be inverses of $g$. Then $e=g_1^{-1}g=g_2^{-1}g\implies g_1^{-1}=g_2^{-1}$ so inverses are unique.
+\end{proof}
+
+\begin{exercise}
+Show that if $H$ is a subgroup of $\mathbb{Z}$, then $H$ is cyclic.
+\end{exercise}
+\begin{proof}
+There exists a greatest common divisor of the elements of $H$. Call it $d$. $d\in H$ by Bezout's lemma. Furthermore, every element of $H$ is a multiple of $d$. Thus $d$ is a generator of $H$ so $H$ is cyclic.
+\end{proof}
+
+\begin{exercise}
+Show that a subgroup $F$ of a cyclic group $G$ is cyclic.
+\end{exercise}
+\begin{proof}
+Let $g$ be a generator of $G$. Then every element $f\in F$ is of the form $g^n$ for some $n\in \mathbb{Z}$. Let $H$ be the set of all integers $n$ such that $g^n\in F$. $e=g^0\in F$ so $0\in H$. $g^n\in F\implies g^{-n}\in F$ so $H$ is closed under inverses. $g^n,g^m\in F\implies g^ng^m=g^{n+m}\in F$ so $H$ is closed under composition. Thus $H$ is a subgroup of $\mathbb{Z}$ so is cyclic. Let $d$ be a generator of $H$. every element of $F$ is then of the form ${(g^d)}^k$ for some integer $k$. Thus $F$ is cyclic.
+\end{proof}
+
+\begin{exercise}
+Suppose that $A$, $A_1$ and $A_2$ are subsets of a group $G$, and that $A_1\subseteq A_2$.
+Show that\\
+\begin{align*}
+(i&) Z(A)\text{ is a subgroup of }G\\
+(ii&) Z(A_2)\subseteq Z(A_1)\\
+(iii&) A\subseteq Z(Z(A))\\
+(iv&) Z(A)=Z(Z(Z(A)))\\
+(v&) A\subset Z(A)\text{ if and only if }A\text{ is abelian.}
+\end{align*}
+\end{exercise}
+
+\begin{proof}
+$(i)$\\
+$e^{-1}g^{-1}eg=e\forall g\in G$ so $e\in Z(A)$.\\
+Let $a\in Z(A)$. Let $g\in A$. Then 
+\begin{align*}   
+a^{-1}g^{-1}ag&=e\\\implies ag&=ga\\\implies g^{-1}ag&=a\\\implies g^{-1}a&=ag^{-1}\\\implies ag^{-1}a^{-1}&=g^{-1}\\\implies ag^{-1}a^{-1}g&=e
+\end{align*}
+so $a^{-1}\in Z(A)$.
+
+Let $a,b\in Z(A),g\in A.$ $(ab)^{-1}g^{-1}(ab)g=b^{-1}a^{-1}g^{-1}abg=b^{-1}g^{-1}bg=e$ so $ab\in Z(A)$.
+Thus $Z(A)$ is a subgroup.
+\end{proof}
+
+\end{document}
