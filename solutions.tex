@@ -62,7 +62,7 @@ Show that\\
 (ii&) Z(A_2)\subseteq Z(A_1)\\
 (iii&) A\subseteq Z(Z(A))\\
 (iv&) Z(A)=Z(Z(Z(A)))\\
-(v&) A\subset Z(A)\text{ if and only if }A\text{ is abelian.}
+(v&) A\subseteq Z(A)\text{ if and only if }A\text{ is abelian.}
 \end{align*}
 \end{exercise}
 
@@ -76,7 +76,42 @@ a^{-1}g^{-1}ag&=e\\\implies ag&=ga\\\implies g^{-1}ag&=a\\\implies g^{-1}a&=ag^{
 so $a^{-1}\in Z(A)$.
 
 Let $a,b\in Z(A),g\in A.$ $(ab)^{-1}g^{-1}(ab)g=b^{-1}a^{-1}g^{-1}abg=b^{-1}g^{-1}bg=e$ so $ab\in Z(A)$.
-Thus $Z(A)$ is a subgroup.
+Thus $Z(A)$ is a subgroup of $G$.
+
+$(ii)$\\
+Let $a\in Z(A_2)$. Let $g\in A_1$. Then $g\in A_2$ so $[a,g]=e$. Thus $a\in Z(A_1)$.
+
+$(iii)$\\
+Let $a\in A$. We want $[a,g]=e\forall g\in Z(A)$. If $g\in Z(A)$, then $[g,a]=e\implies [a,g]=e$.
+
+$(iv)$\\
+$A\subseteq Z(Z(A))$ so $Z(Z(Z(A)))\subseteq Z(A)$. Furthermore, $Z(A)\subseteq Z(Z(Z(A)))$ so $Z(A)=Z(Z(Z(A)))$.
+
+$(v)$\\
+Let $a,b\in A$. Then $a\in Z(A)$ so $[a,b]=0$ so $A$ is abelian.
+
+Now let $A$ be abelian. Then every element of $A$ commutes with every element of $A$ so $A\subseteq Z(A)$.
 \end{proof}
 
+\begin{exercise}
+Show that if $\phi$ is a homomorphism of a group $G$ into a group $H$ then its kernel is a normal subgroup of $G$.
+\end{exercise}
+\begin{proof}
+let $a\in\text{ker }\phi$ so that $\phi(a)=e$. Let $g\in G$. Then $\phi(g^{-1}ag)=\phi(g^{-1})\phi(a)\phi(g)=\phi(g)^{-1}\phi(g)=e$ so $a^g\in \text{ker }\phi$. Thus $\text{ker }\phi$ is normal.
+\end{proof}
+
+\begin{exercise}
+Suppose that $A$ is a non-empty subset of a group $G$ and that $g\in G$. let $\psi_A(g)=A^g$. Show that $\psi_A$ maps $G$ onto conj$(A)$, and $\psi_A(g')=\psi_A(g)$ if and only if $g'\in N(A)g$. Thus if $G$ is a finite group then $|\text{conj}(A)|=|G/N(A)|$, so that $|\text{conj}(A)|\cdot|N(A)|=|G|$.
+\end{exercise}
+\begin{proof}
+$\psi_A(g)=A^g$ so $\psi_A(g)$ is conjugate to $A$. $\psi_A$ is also clearly surjective so maps $G$ onto conj$(A)$.
+
+$\psi_A(g')=\psi_A(g)\iff A^{g'}=A^g$.
+
+Let $g'\in N(A)g$. Then $g'=hg$ for some $h\in G$ such that $a^h\in A\forall a\in A$. Thus given $a\in A$, $a^{g'}=(hg)^{-1}ahg=g^{-1}h^{-1}ahg=g^{-1}a^hg\in A^g$. Hence $A^{g'}\subseteq A^g$. Furthermore, $g=h^{-1}g'$ so $A^g\subseteq A^{g'}$. Thus $A^{g'}=A^g$.
+
+Now let $A^{g'}=A^g$.
+
+Let $G$ be finite. We have established a correspondence between elements of conj$(A)$ and cosets of $N(A)$ so $|\text{conj}(A)|=|G/N(A)|$. $|\text{conj}(A)|\cdot|N(A)|=|G|$ since $|G/N(A)|=|G|/|N(A)|$. 
+\end{proof}
 \end{document}
