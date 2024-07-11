@@ -114,4 +114,23 @@ Now let $A^{g'}=A^g$. We want $a^{g'g^{-1}}\in A\forall A$. Let $a\in A$. $a^{g'
 
 Let $G$ be finite. We have established a correspondence between elements of conj$(A)$ and cosets of $N(A)$ so $|\text{conj}(A)|=|G/N(A)|$. $|\text{conj}(A)|\cdot|N(A)|=|G|$ since $|G/N(A)|=|G|/|N(A)|$. 
 \end{proof}
+
+\begin{exercise}
+Show that if $G$ is a finite group and $G$ is a subgroup of $G$ with index $2$ in $G$, then $H$ is a normal subgroup of $G$.
+\end{exercise}
+\begin{proof}
+Let $H$ and $gH$ be the cosets in $G/H$ with $g\notin H$. Let $a\in G$. Then $aH=H$ or $aH=gH$. If $aH=H$, then $a\in H$ so $aH=H=Ha$. If $aH=gH$, then $a\notin H$ so $Ha\neq H$ so $Ha=gH=aH$. Thus the left and right cosets of $H$ are the same so $H$ is normal.
+\end{proof}
+
+\begin{exercise}
+Show that if $G$ is a group, then $G/[G,G]$ is abelian, and if $H\trianglelefteq G$ then $G/H$ is abelian if and only if $[G,G]\subseteq H$.
+\end{exercise}
+\begin{proof}
+Let $a,b\in G$. $(a[G,G])^{-1}(b[G,G])^{-1}a[G,G]b[G,G]=[a,b][G,G]=e[G,G]$ so $G/[G,G]$ is abelian.
+
+$(\implies)$ Let $a,b\in G$. $[a,b]H=[aH,bH]=H$ so $[a,b]\in H$. Thus $[G,G]\subseteq H$.
+
+$(\impliedby)$ Let $aH,bH\in G/H$. $[aH,bH]=[a,b]H=eH$. Thus $G/H$ is abelian.
+\end{proof}
+
 \end{document}
