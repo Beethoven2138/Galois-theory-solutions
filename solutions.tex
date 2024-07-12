@@ -12,7 +12,7 @@
 \usepackage[a4paper, total={6in, 8in}]{geometry}
 \usepackage{cite}
 \title{Galois theory solutions}
-\author{saxon.supple }
+\author{Saxon Supple}
 \date{July 2024}
 
 
@@ -207,8 +207,11 @@ Let $g_1,...,g_s$ be a generating set of $G$. Define $\phi:\mathbb{Z}^s\to G:(a_
 \end{proof}
 
 \begin{exercise}
-Suppose that $G$ is a finitely generated abelian group. Show that $G\cong \mathbb{Z}^s\times T$, where $T$ is a finite group.
+Suppose that $G$ is a finitely generated abelian group. Show that $G\cong \mathbb{Z}^s\oplus T$, where $T$ is a finite group.
 \end{exercise}
+\begin{proof}
+Let $F$ be the set of elements of $G$ with infinite order and the identity element. $F$ is a subgroup. Let $T$ be the torsion subgroup. We then have $G\cong F\oplus T$. $F\cong\mathbb{Z}^s$ where $s$ is defined as in the previous exercise. Then $G\cong\mathbb{Z}^s\oplus T$.
+\end{proof}
 
 \subsection{Finite Permutation Groups}
 
