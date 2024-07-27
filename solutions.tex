@@ -239,5 +239,32 @@ The dodecahedron has $12$ pentagonal faces so the group of rotations has $12\cdo
 The group of rotations is isomorphic to a subgroup of $S_5$ and the only subgroup of $S_5$ with $60$ elements is $A_5$.
 \end{proof}
 
+\begin{exercise}
+A group series $(G_i)_{i=0}^r$ is an upper central series if $G_{i-1}/G_i=Z(G/G_i)$ for $1\leq i\leq r$. Show that $G$ possesses an upper central series if and only if $G$ is nilpotent.
+\end{exercise}
+\begin{proof}
+$(\implies)$ Trivial.
+
+$(\impliedby)$ Let $(G_i)_{i=0}^r$ be a central series. Define a series $(H_i)_{i=0}^r$ by $H_0=G$ and $H_i=[G_{i-1},G_{i-1}]$ for $1\leq i\leq r$.
+
+We have $[g,h]\in G_i\forall g\in G,h\in G_{i-1}$
+\end{proof}
+
+
+\begin{exercise}
+Show that Gal$(f)$ is a subgroup of $S_k$.
+\end{exercise}
+\begin{proof}
+$(\alpha_1,...,\alpha_k)$ is conjugate to itself so Id $\in S_k$.
+
+Let $\sigma,\tau\in$ Gal$(f)$. Let $p\in\mathbb{Q}[x_1,...x_k]$ such that $p(\alpha_1,...,\alpha_k)=0$ so that $p(\alpha_{\sigma(1)},...,\alpha_{\sigma(k)})=0$ and $p(\alpha_{\tau(1)},...,\alpha_{\tau(k)})=0$. Define $q\in\mathbb{Q}[x_1,...x_k]$ by $q(x_1,...,x_k)=p(\tau(x_1),...,\tau(x_k))$. Then $q(\alpha_1,...,\alpha_k)=p(\alpha_{\tau(1)},...,\alpha_{\tau(k)})=0\implies q(\alpha_{\sigma(1)},...,\alpha_{\sigma(k)})=p(\alpha_{\tau\circ\sigma(1)},...,\alpha_{\tau\circ\sigma(k)})=0$.
+
+Now let $p\in\mathbb{Q}[x_1,...x_k]$ such that $p(\alpha_{\tau\circ\sigma(1)},...,\alpha_{\tau\circ\sigma(k)})=0$. Define $q\in\mathbb{Q}[x_1,...x_k]$ by $q(x_1,...,x_k)=p(\tau(x_1),...,\tau(x_k))$. Then $q(\alpha_{\sigma(1)},...,\alpha_{\sigma(k)})=p(\alpha_{\tau\circ\sigma(1)},...,\alpha_{\tau\circ\sigma(k)})=0\implies q(\alpha_1,...,\alpha_k)=p(\alpha_{\tau(1)},...,\alpha_{\tau(k)})=0\implies p(\alpha_1,...,\alpha_k)=0$. Thus $\tau\circ\sigma\in$ Gal$(f)$.
+
+Let $\sigma\in$ Gal$(f)$. Let $p\in\mathbb{Q}[x_1,...x_k]$. Define $q\in\mathbb{Q}[x_1,...x_k]$ by $q(x_1,...,x_k)=p(\sigma^{-1}(x_1),...,\sigma^{-1}(x_k))$. Then $p(\alpha_{\sigma^{-1}(1)},...,\alpha_{\sigma^{-1}(k)})=q(\alpha_1,...,\alpha_k)=0\iff q(\alpha_{\sigma(1)},...,\alpha_{\sigma(k)})=p(\alpha_1,...,\alpha_k)=0$ so $\sigma^{-1}\in$ Gal$(f)$.
+
+Thus Gal$(f)\leqslant S_k$.
+\end{proof}
+
 
 \end{document}
