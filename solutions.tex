@@ -286,5 +286,20 @@ Show that the only ring in which $0=1$ is the trivial ring.
 Let $R$ be a non-trivial ring with $0=1$ and let $a\in R$ be non-zero. Then $a=1\cdot a=0\cdot a=0$; a contradiction.
 \end{proof}
 
+\begin{exercise}
+Show that $\mathbb{Z}$ is a principal ideal domain.
+\end{exercise}
+\begin{proof}
+Let $I$ be an ideal in $\mathbb{Z}$. If $I=\{0\}$ then $I=\langle 0\rangle $. Otherwise, let $n$ be the smallest positive integer in $I$. Let $a\in I$. Then $a=kn+r$ for some $k\in\mathbb{Z}$ and $0\leq r<n$. $kn\in I$ so $r=a-kn\in I$. $n$ is the smallest positive integer in $I$ so $r=0$ meaning that $n$ divides $a$. Thus $I=\langle n\rangle$.
+\end{proof}
+
+\begin{exercise}
+let $\phi:K\to L$ be a homomorphism of fields. Show that char $K=$ char $L$.
+\end{exercise}
+\begin{proof}
+Suppose that $K$ has characteristic $0$. Then $m\cdot 1_K\neq 0\forall m>0$. Thus $\phi(m\cdot 1_K)=m\cdot 1_L\neq0\forall m>0$ by injectivity so $L$ has characteristic $0$.
+
+Now suppose that $K$ has characteristic $p>0$. Then $p\cdot 1_L=\phi(p\cdot 1_K)=\phi(0)=0$. Now suppose that there exists an $m$ such that $0<m<p$ and $m\cdot 1_L=0$. $\phi$ is injective so $m\cdot 1_L=\phi(m\cdot 1_K)=0\implies m\cdot 1_K=0$; a contradiction. Thus $L$ has characteristic $p$.
+\end{proof}
 
 \end{document}
