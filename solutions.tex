@@ -302,4 +302,14 @@ Suppose that $K$ has characteristic $0$. Then $m\cdot 1_K\neq 0\forall m>0$. Thu
 Now suppose that $K$ has characteristic $p>0$. Then $p\cdot 1_L=\phi(p\cdot 1_K)=\phi(0)=0$. Now suppose that there exists an $m$ such that $0<m<p$ and $m\cdot 1_L=0$. $\phi$ is injective so $m\cdot 1_L=\phi(m\cdot 1_K)=0\implies m\cdot 1_K=0$; a contradiction. Thus $L$ has characteristic $p$.
 \end{proof}
 
+\begin{exercise}
+Let $p$ be a prime and consider the field $\mathbb{F}_p(t)$ of rational expressions over $\mathbb{F}$. Show that $t$ has no $p$th root in $\mathbb{F}_p(t)$.
+\end{exercise}
+
+\begin{proof}
+Suppose that $t$ has a $p$th root $a\in \mathbb{F}_p(t)$. Write $a$ as $\frac{r}{s}$ for $r,s\in\mathbb{F}_p[t]$. Then $t=(\frac{r}{s})^p\implies ts^p=r^p\implies 1+p\text{deg}(s)=p\text{deg}(r)\implies 1=p(\text{deg}(r)-\text{deg}(s))$. A contradiction.
+\end{proof}
+
+
+
 \end{document}
