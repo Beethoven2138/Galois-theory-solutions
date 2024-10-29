@@ -310,6 +310,48 @@ Let $p$ be a prime and consider the field $\mathbb{F}_p(t)$ of rational expressi
 Suppose that $t$ has a $p$th root $a\in \mathbb{F}_p(t)$. Write $a$ as $\frac{r}{s}$ for $r,s\in\mathbb{F}_p[t]$. Then $t=(\frac{r}{s})^p\implies ts^p=r^p\implies 1+p\text{deg}(s)=p\text{deg}(r)\implies 1=p(\text{deg}(r)-\text{deg}(s))$. A contradiction.
 \end{proof}
 
+\begin{exercise}
+Let $f$ be a quadratic polynomial over $\mathbb{Q}$. Prove that $\text{Gal}(f)$ is $S_2$ if $f$ has two distinct irrational roots, and trivial otherwise.
+\end{exercise}
+\begin{proof}
+Let $f$ have distinct irrational roots $\alpha_1,\alpha_2$. Let $d$ be the discriminant of $f$, which is irrational. Since $d^2$ is rational, we can express any $\omega\in\mathbb{Q}(d)$ uniquely as $a+bd$ where $a,b\in\mathbb{Q}$. Define $\overline{\omega}$ as $a-bd$. Given $\nu=f+gd$, we have $\overline{\nu}+\overline{\omega}=(a+f)-(b+g)d=\overline{\nu+\omega}$. Furthermore, $\overline{\nu}\cdot\overline{\omega}=(a-bd)(f-gd)=af-(ag+bf)d+bgd^2$ and $\overline{\nu\cdot\omega}=\overline{af+(bf+ag)d+bgd^2}=af-(bf+ag)d+bgd^2$ so $\overline{\nu}\cdot\overline{\omega}=\overline{\nu\cdot\omega}$. Now let $p\in\mathbb{Q}[x_1,x_2]$. By induction we have that $p(\overline{x_1},\overline{x_2})=\overline{p(x_1,x_2)}$ so $p(\alpha_1,\alpha_2)=0\iff p(\overline{\alpha_1},\overline{\alpha_2})=\overline{0}=0\iff p(\alpha_2,\alpha_1)=0$. Thus $(\alpha_1,\alpha_2)$ and $(\alpha_2,\alpha_1)$ are conjugate so $\text{Gal}(f)=S_2$.
 
+The case where both roots are rational was covered in an exercise. It's not possible for only one root to be rational by the quadratic formula so all cases are covered.
+\end{proof}
+
+\begin{exercise}
+Let $R$ be a ring and let $\phi\colon1\to R$ be a homomorphism, where $1$ denotes the trivial ring. Prove that $R$ is trivial too and that $\phi$ is an isomorphism.
+\end{exercise}
+\begin{proof}
+$1_R=\phi(1_1)=\phi(0_1)=0_R$ so $R$ is trivial. $\phi$ is injective and surjective so a ring isomorphism.
+\end{proof}
+
+\begin{exercise}
+Let $f(t)=a_0+a_1t+...+a_nt^n\in\mathbb{Z}[t]$. Let $c/d$ be a rational root of $f$, where $c$ and $d$ are coprime integers. Prove the rational roots theorem: $c|a_0$ and $d|a_n$.
+\end{exercise}
+\begin{proof}
+$f(c/d)=a_0+a_1c/d+...+a_n(c/d)^n=0\implies a_0d^n+a_1cd^{n-1}+...+a_nc^n=0$. Thus $a_0\equiv0\text{ mod }c$ and $a_n\equiv0\text{ mod }d$ as required.
+\end{proof}
+
+\begin{exercise}
+Can $C_6$ act faithfully on a $4$-element set?
+\end{exercise}
+\begin{proof}
+No. Let $S$ be the $4$-element set and suppose that $\Phi\colon C_6\to\text{Sym}(S):g\mapsto(x\mapsto g\cdot x)$ is injective, ie has trivial kernel. $1$ has order $6$ so $\Phi(1)$ also has order $6$. However, $\text{Sym}(S)$ has no element of order $6$; a contradiction.
+\end{proof}
+
+\begin{exercise}
+Let $G$ be a finite group acting transitively on a nonempty set $X$. Prove that $|X|$ divides $|G|$.
+\end{exercise}
+\begin{proof}
+Let $x\in X$. Then $|G|=|\text{Orb}(x)|\cdot|\text{Stab}(x)|=|X|\cdot|\text{Stab}(x)|$ so $|X|$ divides $|G|$.
+\end{proof}
+
+\begin{exercise}
+Let $R$ be a ring and let $I_0\subseteq I_1\subseteq...$ be ideals of $R$. Prove that $\bigcup_{n=0}^\infty I_n$ is an ideal of $R$.
+\end{exercise}
+\begin{proof}
+Let $a,b\in \bigcup_{n=0}^\infty I_n$. We have that $a\in I_k$ for some $k$. Then given any $r\in R$, we have $ra\in I_k\subseteq \bigcup_{n=0}^\infty I_n$. We also have that $b\in I_l$ for some $l$. Let $m=\text{max}(k,l)$ so that $a,b\in I_m$. Then $b-a\in I_m\subseteq\bigcup_{n=0}^\infty I_n$. Thus $\bigcup_{n=0}^\infty I_n$ is an ideal.
+\end{proof}
 
 \end{document}
