@@ -375,4 +375,18 @@ Let $R$ be a principle ideal domain. Let $r\in R$ be neither $0$ not a unit. Pro
 Suppose that no irreducible divides $r$. Then writing $r_0=r$, we have $r_0=r_1s_1$ for some non-units $r_1$ and $s_1$. Similarly, no irreducible divides $r_1$ so we can express $r_1$ as $r_1=r_2s_2$ for some non-units $r_2$ and $s_2$. Continue this ad infinitum such that $r_i=r_{i+1}s_{i+1}$ for non-units $r_{i+1}s_{i+1}$ with $r_i$ not divisible by an irreducible. We then have $\langle r_0\rangle\subset\langle r_1\rangle\subset\langle r_2\rangle\subset...$. However, there exists some $i$ such that $\langle r_i\rangle=\langle r_{i+1}\rangle=\langle r_{i+2}\rangle=...$; a contradiction.
 \end{proof}
 
+\begin{exercise}
+For $f\in K[t]$, there is a unique homomorphism $\theta_f\colon K[t]\to K[t]$ such that $\theta_f(t)=f$ and $\theta_f(a)=a$ for all $a\in K$. Which result guarantees this?
+\end{exercise}
+\begin{proof}
+Universal property of the polynomial ring. The homomorphism is given by $\theta_f(\sum_i a_it^i)=\sum_i a_if^i$
+\end{proof}
+\begin{exercise}
+For $f,g\in K[t]$, what is $\theta_f(g)$ in explicit terms?
+\end{exercise}
+\begin{proof}
+$g(f)$ and it has degree $\text{deg}(f)\text{deg}(g)$.
+\end{proof}
+
+
 \end{document}
