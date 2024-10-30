@@ -354,4 +354,25 @@ Let $R$ be a ring and let $I_0\subseteq I_1\subseteq...$ be ideals of $R$. Prove
 Let $a,b\in \bigcup_{n=0}^\infty I_n$. We have that $a\in I_k$ for some $k$. Then given any $r\in R$, we have $ra\in I_k\subseteq \bigcup_{n=0}^\infty I_n$. We also have that $b\in I_l$ for some $l$. Let $m=\text{max}(k,l)$ so that $a,b\in I_m$. Then $b-a\in I_m\subseteq\bigcup_{n=0}^\infty I_n$. Thus $\bigcup_{n=0}^\infty I_n$ is an ideal.
 \end{proof}
 
+\begin{exercise}
+Let $R$ be a principle ideal domain and let $I_0\subseteq I_1\subseteq ...$ be ideals of $R$. Prove that there is some $n\geq0$ such that $I_n=I_{n+1}=I_{n+2}=...$
+\end{exercise}
+\begin{proof}
+There exists some $a\in R$ such that $\bigcup_{n=0}^\infty I_n=\langle a\rangle$. There exists some $k\in\mathbb{N}$ such that $a\in I_k$ implying that $\bigcup_{n=0}^\infty I_n= I_n\forall n\geq k$.
+\end{proof}
+
+\begin{exercise}
+Let $R$ be an integral domain. Let $r,s\in R$ with $r\neq 0$ and $s$ not a unit. Prove that $\langle rs\rangle$ is a proper subset of $\langle r \rangle$.
+\end{exercise}
+\begin{proof}
+Clearly $\langle rs\rangle\subseteq\langle r\rangle$. Now suppose that $\langle rs\rangle=\langle r\rangle$. We then have some $a\in R$ such that $ars=r\implies r(as-1)=0$. $r\neq 0$ so $as=1$. But $s$ is not a unit; a contradiction.
+\end{proof}
+
+\begin{exercise}
+Let $R$ be a principle ideal domain. Let $r\in R$ be neither $0$ not a unit. Prove that some irreducible divides $r$.
+\end{exercise}
+\begin{proof}
+Suppose that no irreducible divides $r$. Then writing $r_0=r$, we have $r_0=r_1s_1$ for some non-units $r_1$ and $s_1$. Similarly, no irreducible divides $r_1$ so we can express $r_1$ as $r_1=r_2s_2$ for some non-units $r_2$ and $s_2$. Continue this ad infinitum such that $r_i=r_{i+1}s_{i+1}$ for non-units $r_{i+1}s_{i+1}$ with $r_i$ not divisible by an irreducible. We then have $\langle r_0\rangle\subset\langle r_1\rangle\subset\langle r_2\rangle\subset...$. However, there exists some $i$ such that $\langle r_i\rangle=\langle r_{i+1}\rangle=\langle r_{i+2}\rangle=...$; a contradiction.
+\end{proof}
+
 \end{document}
