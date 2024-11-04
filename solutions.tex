@@ -388,5 +388,17 @@ For $f,g\in K[t]$, what is $\theta_f(g)$ in explicit terms?
 $g(f)$ and it has degree $\text{deg}(f)\text{deg}(g)$.
 \end{proof}
 
+\begin{exercise}
+For $f_1,f_2\in\mathbb{K}[t]$, what can you say about the composite homomorphism\[\mathbb{K}[t]\overset{\theta_{f_1}}{\to}\mathbb{K}[t]\overset{\theta_{f_2}}{\to}\mathbb{K}[t]?\]
+\end{exercise}
+\begin{proof}
+$\text{deg}(\theta_{f_2}\circ\theta_{f_1}(g))=\text{deg}(f_1)\text{deg}(f_2)\text{deg}(g)$.
+\end{proof}
+\begin{exercise}
+Using the previous parts, find all the isomorphisms $\mathbb{K}[t]\to\mathbb{K}[t]$ over $\mathbb{K}$.
+\end{exercise}
+\begin{proof}
+Any isomorphism over $\mathbb{K}$ is of the form $\theta_f$ for some $f\in\mathbb{K}[t]$, with $f$ necessarily having degree $1$ and hence linear. Let $f$ be given as $at+b$ for some $a,b\in\mathbb{K}$ with $a\neq0$. Then $\theta_f(g)=g(at+b)\forall g\in\mathbb{K}[t]$. $\theta_{\frac{t-b}{a}}\circ\theta_{f}(g)=\theta_{\frac{t-b}{a}}(g(at+b))=g(a\frac{t-b}{a}+b)=g\forall g\in \mathbb{K}[t]$ and $\theta_f\circ\theta_{\frac{t-b}{a}}(g)=\theta_f(g(\frac{t-b}{a}))=g(\frac{at+b-b}{a})=g\forall g\in\mathbb{K}[t]$ and so $\theta_f$ is an isomorphism. Hence all isomorphisms $\mathbb{K}[t]\to\mathbb{K}[t]$ over $\mathbb{K}$ are of the form $\theta_{at+b}$ for non-zero $a$.
+\end{proof}
 
 \end{document}
