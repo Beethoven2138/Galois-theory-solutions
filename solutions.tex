@@ -3,6 +3,7 @@
 \usepackage[english]{babel}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\usepackage{enumitem} 
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{tikz}
@@ -420,6 +421,30 @@ Show that for every $n\geq1$, there exists an extension of $\mathbb{Q}$ of degre
 \end{exercise}
 \begin{proof}
 Consider the polynomial $t^n-2$. The prime $2$ does not divide the leading coefficient and does divide all other coefficients; furthermore $2^2$ does not divide the constant term so $t^n-2$ is irreducible over $\mathbb{Q}$ by Eisenstein's criterion. $\sqrt[n]{2}$ then has minimal polynomial $t^n-2$ so $\mathbb{Q}(\sqrt[n]{2}):\mathbb{Q}$ has degree $n$.
+\end{proof}
+
+\begin{exercise}
+Which of the following polynomials are irreducible over $\mathbb{Q}$?
+\begin{enumerate}[label=(\roman*)]
+    \item $1+2t-5t^3+2t^6$
+    \item $4-3t-2t^2$
+    \item $4-13t-2t^3$
+    \item $1+t+t^2+t^3+t^4+t^5$
+    \item $1+t+t^2+t^3+t^4+t^5+t^6$
+    \item $2.2+3.3t-1.1t^3+t^7$
+    \item $1+t^4$
+\end{enumerate}
+\end{exercise}
+\begin{proof}
+\begin{enumerate}[label=(\roman*)]
+    \item Reducible since $1$ is a root
+    \item The discriminant is $9+4*4*2=41$ which is not a square so the polynomial is irreducible.
+    \item Taken modulo $3$, the polynomial becomes $1-t-2t^3$ which has no solutions modulo $3$ so the polynomial is irreducible by the Mod $p$ method.
+    \item The polynomial is $\frac{t^6-1}{t-1}=\frac{(t^3-1)(t^3+1)}{t-1}=\frac{(t-1)(t^2+t+1)(t^3+1)}{t-1}=(t^2+t+1)(t^3+1)$ so not irreducible
+    \item Yes, since it's $\Phi_7$ and cyclotomic polynomials are irreducible.
+    \item $10$ is a unit so the polynomial is irreducible if and only if $f=22+33t-11t^3+10t^7$ is irreducible. The prime $11$ divides each coefficient other than the leading one and $100$ does not divide the constant term so $f$ is irreducible by Eisenstein's criterion.
+    \item The polynomial is irreducible modulo $3$ so is irreducible by the Mod $p$ method.
+\end{enumerate}
 \end{proof}
 
 \end{document}
