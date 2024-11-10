@@ -454,4 +454,36 @@ Let $\mathbb{M}:\mathbb{K}$ be a field extension. Show that $\mathbb{K}(Y\cup Z)
 $\mathbb{K}(Y\cup Z)=\bigcap \text{Subfields of }\mathbb{M}\text{ containing }\mathbb{K}\cup(Y\cup Z)=\bigcap \text{Subfields of }\mathbb{M}\text{ containing }(\mathbb{K}\cup Y)\cup Z=(\mathbb{K}(Y))(Z)$
 \end{proof}
 
+\begin{exercise}
+Let $\mathbb{M}:\mathbb{K}$ be a field extension and $\alpha,\beta\in \mathbb{M}$. Call $\alpha$ and $\beta$ conjugate over $\mathbb{K}$ if for all $p\in \mathbb{K}[t]$, we have $p(\alpha)=0\iff p(\beta)=0$.
+\begin{enumerate}[label=(\roman*)]
+    \item Prove that $\alpha$ and $\beta$ are conjugate over $\mathbb{K}$ if and only if either both are transcendental or both are algebraic and they have the same minimal polynomial.
+    \item Show that if there exists an irreducible polynomial $p\in \mathbb{K}[t]$ such that $p(\alpha)=0=p(\beta)$, then $\alpha$ and $\beta$ are conjugate over $\mathbb{K}$.
+    \item Show that if $\alpha$ and $\beta$ are conjugate over $\mathbb{K}$ then $\mathbb{K}(\alpha)\cong\mathbb{K}(\beta)$ over $\mathbb{K}$.
+    \item Let $p$ be a prime number and put $\omega=e^{2\pi i/p}$. Prove that $\omega,...,\omega^{p-1}$ are conjugate over $\mathbb{Q}$.
+    \item Prove that $\mathbb{Q}(\pi)\cong\mathbb{Q}(e)$ over $\mathbb{Q}$.
+\end{enumerate}
+\end{exercise}
+
+\begin{proof}
+    \begin{enumerate}[label=(\roman*)]
+        \item $(\impliedby)$If both are transcendental then they're vacuously conjugate. Suppose both are algebraic with the same minimal polynomial $m$. $\text{ker}(\text{ev}_\alpha)=\langle m\rangle=\text{ker}(\text{ev}_\beta)$ so $p(\alpha)=0\iff p\in\text{ker}(\text{ev}_\alpha)\iff p\in \text{ker}(\text{ev}_\beta)\iff p(\beta)=0$.
+        
+        $(\implies)$ Suppose $\alpha$ and $\beta$ are conjugate over $\mathbb{K}$. Then $\text{ker}(\text{ev}_\alpha)=\text{ker}(\text{ev}_\beta)$. If the ideals are not trivial then $\alpha$ and $\beta$ are algebraic with the same minimal polynomials (the unique monic polynomial which generates the ideal). If the ideals are trivial, then $\alpha$ and $\beta$ are transcendental.
+        \item They would then be algebraic with the same minimal polynomial so conjugate.
+        \item First consider the case where $\alpha$ and $\beta$ are algebraic with minimal polynomial $m$. Then $\mathbb{K}(\alpha)\cong \mathbb{K}[t]/\langle m\rangle\cong \mathbb{K}(\beta)$, with each isomorphism fixing $\mathbb{K}$ pointwise.
+        Now consider the case when they're both transendental. Then $\mathbb{K}(\alpha)\cong\mathbb{K}(x)\cong \mathbb{K}(\beta)$, with the isomorphisms again fixing $\mathbb{K}$ pointwise.
+        \item They're all roots of the irreducible (over $\mathbb{Q}$) polynomial $\Phi_p$ so are conjugate over $\mathbb{Q}$.
+        \item Both $\pi$ and $e$ are transcendental over $\mathbb{Q}$ so apply part $(iii)$.
+    \end{enumerate}
+\end{proof}
+
+\begin{exercise}
+Let $\mathbb{M}:\mathbb{L}:\mathbb{K}$ be field extensions, which you may not assume to be finite.
+\begin{enumerate}[label=(\roman*)]
+    \item Let $\alpha\in \mathbb{M}$. Prove that if $\alpha$ is algebraic over $\mathbb{L}$ and $\mathbb{L}$ is algebraic over $\mathbb{K}$ then $\alpha$ is algebraic over $\mathbb{K}$.
+    \item Deduce that if $\mathbb{M}:\mathbb{L}$ and $\mathbb{L}:\mathbb{K}$ are algebraic then so is $\mathbb{M}:\mathbb{K}$.
+\end{enumerate}
+\end{exercise}
+
 \end{document}
