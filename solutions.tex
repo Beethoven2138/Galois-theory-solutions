@@ -488,7 +488,7 @@ Let $\mathbb{M}:\mathbb{L}:\mathbb{K}$ be field extensions, which you may not as
 
 \begin{proof}
 \begin{enumerate}[label=(\roman*)]
-    \item Let $p=a_0+a_1x+...+a_nx^n\in\mathbb{L}[x]$ be a non-zero polynomial such that $p(\alpha)=0$. Note that $p\in \mathbb{K}(a_0,...,a_n)[x]$. $\mathbb{K}(a_0,...,a_n):\mathbb{K}$ is finite and $\mathbb{K}(a_0,...,a_n,\alpha):\mathbb{K}(a_0,...,a_n)$ is simple, so finite, hence $\mathbb{K}(a_0,...,a_n,\alpha):\mathbb{K}$ is finite so algebraic. Thus $\alpha$ is algebraic over $\mathbb{K}$.
+    \item Let $p=a_0+a_1x+...+a_nx^n\in\mathbb{L}[x]$ be a non-zero polynomial such that $p(\alpha)=0$. Note that $p\in \mathbb{K}(a_0,...,a_n)[x]$. $\mathbb{K}(a_0,...,a_n):\mathbb{K}$ is finite and $\mathbb{K}(a_0,...,a_n,\alpha):\mathbb{K}(a_0,...,a_n)$ is simple algebraic, so finite, hence $\mathbb{K}(a_0,...,a_n,\alpha):\mathbb{K}$ is finite so algebraic. Thus $\alpha$ is algebraic over $\mathbb{K}$.
     \item Every $\alpha\in \mathbb{M}$ is algebraic over $\mathbb{K}$ so $\mathbb{M}:\mathbb{K}$ is algebraic.
 \end{enumerate}
 \end{proof}
@@ -509,7 +509,7 @@ Let $f\in \overline{\mathbb{Q}}[x]$ be a non-zero polynomial and let $\mathbb{F}
 
 \begin{proof}
 \begin{enumerate}[label=(\roman*)]
-    \item $\phi X\subseteq \phi\langle X\rangle\implies \langle\phi X\rangle\subseteq\langle\phi\langle X\rangle\rangle=\phi\langle X\rangle$ since $\phi\langle X\rangle$ is already a field. Suppose that $Y$ is a subfield of $\mathbb{L}$ containing $\phi X$ (want to show it contains $\phi\langle X\rangle$). Then $X=\phi^{-1}\phi X\subseteq\phi^{-1}Y$. $\phi^{-1}Y$ is a field so $\langle X\rangle\subseteq\phi^{-1}Y\implies \phi\langle X\rangle\subseteq Y$. Thus $\langle\phi X\rangle=\phi\langle X\rangle$.
+    \item $\phi X\subseteq \phi\langle X\rangle\implies \langle\phi X\rangle\subseteq\langle\phi\langle X\rangle\rangle=\phi\langle X\rangle$ since $\phi\langle X\rangle$ is already a field. Suppose that $Y$ is a subfield of $\mathbb{L}$ containing $\phi X$. Then $X=\phi^{-1}\phi X\subseteq\phi^{-1}Y$. $\phi^{-1}Y$ is a field so $\langle X\rangle\subseteq\phi^{-1}Y\implies \phi\langle X\rangle\subseteq Y$. Thus $\langle\phi X\rangle=\phi\langle X\rangle$.
     \item $\phi(\mathbb{K}(Y))=\phi(\langle\mathbb{K}\cup Y\rangle)=\langle\phi(\mathbb{K}\cup Y)\rangle=\langle\phi(\mathbb{K})\cup\phi(Y)\rangle=\langle\mathbb{K}\cup\phi(Y)\rangle=\mathbb{K}(\phi Y)$.
 \end{enumerate}
 \end{proof}
