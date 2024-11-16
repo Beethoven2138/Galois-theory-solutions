@@ -549,13 +549,13 @@ Let $\mathbb{M}:\mathbb{K}$ be a finite extension. Prove that every homomorphism
 \end{exercise}
 
 
-I was wondering if a polynomial having a non-solvable Galois group implies that every root is non-radical. The answer is yes. To prove this, it suffices to prove that if a polynomial has a radical root, then every root is radical.
+I was wondering if an irreducible polynomial having a non-solvable Galois group implies that every root is non-radical. The answer is yes. To prove this, it suffices to prove that if a polynomial has a radical root, then every root is radical.
 
 \begin{lemma}
 Let $\mathbb{L}/\mathbb{K}$ be an algebraic extension, where $\mathbb{L}=\mathbb{K}(\alpha)$ for $\alpha\in\mathbb{L}$ with minimal polynomaial $m\in\mathbb{K}[x]$. Let $\mathbb{F}$ be a splitting field of $m$. Then $\mathbb{F}/\mathbb{K}$ is the normal closure of $\mathbb{L}/\mathbb{K}$.
 \end{lemma}
 \begin{proof}
-$\mathbb{F}$ is normal since it is the splitting field of a polynomial over $\mathbb{K}$. We now show that $\mathbb{F}/\mathbb{K}$ is minimal. Let $\mathbb{M}$ be a subfield of $\mathbb{F}$ containing $\mathbb{L}$ with $\mathbb{M}/\mathbb{K}$ normal. $m$ must then split into linear factors over $\mathbb{M}$, since $\alpha\in\mathbb{M}$, and so $\mathbb{M}$ contains every root of $m$ and hence contains $\mathbb{F}$. Thus $\mathbb{M}=\mathbb{F}$.
+$\mathbb{F}/\mathbb{K}$ is normal since $\mathbb{F}$ is the splitting field of a polynomial over $\mathbb{K}$. We now show that $\mathbb{F}/\mathbb{K}$ is minimal. Let $\mathbb{M}$ be a subfield of $\mathbb{F}$ containing $\mathbb{L}$ with $\mathbb{M}/\mathbb{K}$ normal. $m$ must then split into linear factors over $\mathbb{M}$, since $\alpha\in\mathbb{M}$, and so $\mathbb{M}$ contains every root of $m$ and hence contains $\mathbb{F}$. Thus $\mathbb{M}=\mathbb{F}$.
 \end{proof}
 
 \begin{lemma}
@@ -563,7 +563,7 @@ The normal closure of a finite radical extension is a radical extension.
 \end{lemma}
 
 \begin{theorem}
-If a root of a polynomial is radical, then every root is radical.
+If a root of an irreducible polynomial is radical, then every root is radical.
 \end{theorem}
 \begin{proof}
 Let $\mathbb{L}/\mathbb{K}$ be an extension contained in a finite radical extension $\mathbb{M}/\mathbb{K}$. Then the normal closure of $\mathbb{L}/\mathbb{K}$ is contained in the normal closure of $\mathbb{M}/\mathbb{K}$ which is radical by the above lemma. Now suppose that $\mathbb{L}=\mathbb{K}(\alpha)$ for $\alpha\in\mathbb{L}$ algebraic over $\mathbb{K}$ with minimal polynomial $m\in\mathbb{K}[x]$ and $\mathbb{M}/\mathbb{K}$ is a finite radical extension containing $\mathbb{L}/\mathbb{K}$; ie, $m$ has a radical root. Then the spitting field of $m$, which is the normal closure of $\mathbb{L}/\mathbb{K}$, is contained in a radical extension (the normal closure of $\mathbb{M}/\mathbb{K}$) and hence every root of $m$ is radical.
