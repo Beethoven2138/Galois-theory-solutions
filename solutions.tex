@@ -518,7 +518,9 @@ Let $f\in \overline{\mathbb{Q}}[x]$ be a non-zero polynomial and let $\mathbb{F}
 Let $f$ be a nonconstant polynomial over $\mathbb{Z}$. Prove that $f$ is primitive and irreducible over $\mathbb{Q}\iff f$ is irreducible over $\mathbb{Z}$.
 \end{exercise}
 \begin{proof}
+$(\impliedby)$ Gauss' lemma.
 
+$(\implies)$ Suppose that $f$ is primitive and irreducible over $\mathbb{Q}$ but is reducible over $\mathbb{Z}$. Then $f=gh$ for some $g,h\in\mathbb{Z}[x]$, neither of which are $0$ or $1$ (the only unit). If both have degree at least $1$ then $f$ is reducible over $\mathbb{Q}$. Thus one is a constant other than $0$ or $1$. But then $f$ is an integer multiple other than $0$ or $1$ of a polynomial over $\mathbb{Z}$ and so isn't primitive; a contradiction.
 \end{proof}
 
 \begin{exercise}
@@ -532,27 +534,62 @@ Let $f$ be a nonconstant polynomial over $\mathbb{Z}$. Prove that $f$ is primiti
 \end{enumerate}
 \end{exercise}
 
+\begin{proof}
+\begin{enumerate}[label=(\roman*)]
+    \item Let $m\in \mathbb{K}[x]$ be the minimal polynomial of $\sqrt{a}$. If $\sqrt{a}\in\mathbb{K}$ obvious. Otherwise $m=x^2-a$ so has degree $2$.
+    \item $\alpha^2+\frac{b}{a}\alpha+\frac{c}{a}=0\implies (\alpha+\frac{b}{2a})^2-\frac{b^2}{4a^2}+\frac{c}{a}=0\implies (\alpha+\frac{b}{2a})^2=\frac{b^2-4ac}{4a^2}\implies b^2-4ac=((2a)(\alpha+\frac{b}{2a}))^2$ so $b^2-4ac$ has a square root of $\sigma=(2a)(\alpha+\frac{b}{2a})$ in $\mathbb{L}$. The rest is just computation.
+    \item We have that $\mathbb{L}=\mathbb{K}\oplus\alpha\mathbb{K}$ with $\alpha$ having a minimal polynomial $m\in\mathbb{K}$ of degree $2$. Let $m=ax^2+bx+c$. Then $\alpha=\frac{-b+\sqrt{b^2-4ac}}{2a}$ where $\sqrt{b^2-4ac}$ is the correctly chosen square root. Thus $\mathbb{L}=\mathbb{K}(\alpha)=\mathbb{K}(\sqrt{b^2-4ac})$.
+\end{enumerate}
+\end{proof}
+
 \begin{exercise}
 Prove that the field extension $\overline{\mathbb{Q}}:\mathbb{Q}$ is not finite. Deduce that $\overline{\mathbb{Q}}:\mathbb{Q}$ is not even finitely generated.
 \end{exercise}
+\begin{proof}
+Suppose $\overline{\mathbb{Q}}:\mathbb{Q}$ is finite with degree $n$. There is an irreducible polynomial $f\in\mathbb{Q}[x]$ of degree $n+1$. Let $\alpha\in\overline{\mathbb{Q}}$ be a root of $f$. Then $n=[\overline{\mathbb{Q}}:\mathbb{Q}]=[\overline{\mathbb{Q}}:\mathbb{Q}(\alpha)][\mathbb{Q}(\alpha):\mathbb{Q}]\geq [\mathbb{Q}(\alpha):\mathbb{Q}]=n+1$; a contradiction. Hence $\overline{\mathbb{Q}}:\mathbb{Q}$ cannot be both finitely generated and algebraic. $\overline{\mathbb{Q}}:\mathbb{Q}$ is clearly algebraic so it isn't finitely generated.
+\end{proof}
 
 \begin{exercise}
 A field extension $\mathbb{M}:\mathbb{K}$ is simple algebraic if there exists $\alpha\in \mathbb{M}$ such that $\mathbb{M}=\mathbb{K}(\alpha)$ and $\alpha$ is algebraic over $\mathbb{K}$. Prove that $\mathbb{M}:\mathbb{K}$ is simple algebraic if and only if it is simple and algebraic.
 \end{exercise}
+\begin{proof}
+$(\implies)$ By definition.
+
+$(\impliedby)$ $\mathbb{M}=\mathbb{K}(\alpha)$ for some $\alpha\in\mathbb{M}$. But $\mathbb{M}:\mathbb{K}$ is algebraic so $\alpha$ is as well.
+\end{proof}
 
 \begin{exercise}
 Let $\mathbb{Q}(t_1,t_2,...)$ be the field of rational expressions in countably infinitely many symbols $t_1,t_2,...$ (an element is a ratio of polynomials in these symbols, and can involve only finitely many of them). it has a subfield $\mathbb{Q}(t_2,t_3,...)$. So we have extensions\[\mathbb{Q}(t_1,t_2,...):\mathbb{Q}(t_2,t_3,...),\mathbb{Q}(t_2,t_3,...):\mathbb{Q}(t_2,t_3,...).\]Prove that the fields $\mathbb{Q}(t_1,t_2,...)$ and $\mathbb{Q}(t_2,t_3,...)$ are isomorphic, but not isomorphic over $\mathbb{Q}(t_2,t_3,...)$.
 \end{exercise}
+\begin{proof}
+Consider $\phi:\mathbb{Q}(t_1,t_2,...)\to\mathbb{Q}(t_2,t_3,...)$ given by $\phi(t_i)=t_{i+1}$ which is clearly an injective homomorphism between fields with inverse given by $\phi^{-1}(t_i)=t_{i-1}$ so is an isomorphism.
+
+$[\mathbb{Q}(t_1,t_2,...):\mathbb{Q}(t_2,t_3,...)]=\infty$ whereas $[\mathbb{Q}(t_2,t_3,...):\mathbb{Q}(t_2,t_3,...)]=1$ so they can't be isomorphic (since isomorphic vector spaces have the same dimension).
+\end{proof}
 
 \begin{exercise}
 Let $\mathbb{M}:\mathbb{K}$ be a finite extension. Prove that every homomorphism $\mathbb{M}\to\mathbb{M}$ over $\mathbb{K}$ is an automorphism of $\mathbb{M}$ over $\mathbb{K}$.
 \end{exercise}
+\begin{proof}
+Let $\phi:\mathbb{M}\to\mathbb{M}$ be a homomorphism over $\mathbb{K}$. By the rank-nullity theorem, $[\mathbb{M}:\mathbb{K}]=\text{rank}(\phi)+\text{nullity}(\phi)=\text{rank}(\phi)$ since homomorphisms between fields are injective. Thus $\text{Im}(\phi)\leqslant \mathbb{M}$ and $\text{dim}(\text{Im}(\phi))=\text{dim}(\mathbb{M})$ so $\phi$ is surjective so an isomorphism.
+\end{proof}
+
+\begin{exercise}
+Let $\mathbb{K},\mathbb{L}$ and $\mathbb{M}$ be subfields of a field $\mathbb{N}$, with $\mathbb{K}\subseteq\mathbb{L}$ and $\mathbb{K}\subseteq\mathbb{M}$. Here you will prove the 'diamond inequality', $[\mathbb{L}\mathbb{M}:\mathbb{L}]\leq[\mathbb{M}:\mathbb{K}]$.
+\begin{enumerate}[label=(\roman*)]
+    \item First suppose that $\mathbb{M}=\mathbb{K}(\beta)$ for some $\beta$ algebraic over $\mathbb{K}$. Show that $\mathbb{L}\mathbb{M}=\mathbb{L}(\beta)$, then deduce that $[\mathbb{L}\mathbb{M}:\mathbb{L}]\leq[\mathbb{M}:\mathbb{K}]$.
+    \item Now prove the diamond inequality when $\mathbb{M}=\mathbb{K}(\beta_1,...,\beta_n)$ for some $\beta_1,...,\beta_n$ algebraic over $\mathbb{K}$,
+    \item Finally, prove the diamond inequality in full generality.
+\end{enumerate}
+\end{exercise}
+
+
 
 
 I was wondering if an irreducible polynomial having a non-solvable Galois group implies that every root is non-radical. The answer is yes. To prove this, it suffices to prove that if an irreducible polynomial has a radical root, then every root is radical.
 
 \begin{lemma}
-Let $\mathbb{L}/\mathbb{K}$ be an algebraic extension, where $\mathbb{L}=\mathbb{K}(\alpha)$ for $\alpha\in\mathbb{L}$ with minimal polynomaial $m\in\mathbb{K}[x]$. Let $\mathbb{F}$ be a splitting field of $m$. Then $\mathbb{F}/\mathbb{K}$ is the normal closure of $\mathbb{L}/\mathbb{K}$.
+Let $\mathbb{L}/\mathbb{K}$ be an algebraic extension, where $\mathbb{L}=\mathbb{K}(\alpha)$ for $\alpha\in\mathbb{L}$ with minimal polynomial $m\in\mathbb{K}[x]$. Let $\mathbb{F}$ be a splitting field of $m$. Then $\mathbb{F}/\mathbb{K}$ is the normal closure of $\mathbb{L}/\mathbb{K}$.
 \end{lemma}
 \begin{proof}
 $\mathbb{F}/\mathbb{K}$ is normal since $\mathbb{F}$ is the splitting field of a polynomial over $\mathbb{K}$. We now show that $\mathbb{F}/\mathbb{K}$ is minimal. Let $\mathbb{M}$ be a subfield of $\mathbb{F}$ containing $\mathbb{L}$ with $\mathbb{M}/\mathbb{K}$ normal. $m$ must then split into linear factors over $\mathbb{M}$, since $\alpha\in\mathbb{M}$, and so $\mathbb{M}$ contains every root of $m$ and hence contains $\mathbb{F}$. Thus $\mathbb{M}=\mathbb{F}$.
@@ -568,5 +605,6 @@ If a root of an irreducible polynomial is radical, then every root is radical.
 \begin{proof}
 Let $\mathbb{L}/\mathbb{K}$ be an extension contained in a finite radical extension $\mathbb{M}/\mathbb{K}$. Then the normal closure of $\mathbb{L}/\mathbb{K}$ is contained in the normal closure of $\mathbb{M}/\mathbb{K}$ which is radical by the above lemma. Now suppose that $\mathbb{L}=\mathbb{K}(\alpha)$ for $\alpha\in\mathbb{L}$ algebraic over $\mathbb{K}$ with minimal polynomial $m\in\mathbb{K}[x]$ and $\mathbb{M}/\mathbb{K}$ is a finite radical extension containing $\mathbb{L}/\mathbb{K}$; ie, $m$ has a radical root. Then the spitting field of $m$, which is the normal closure of $\mathbb{L}/\mathbb{K}$, is contained in a radical extension (the normal closure of $\mathbb{M}/\mathbb{K}$) and hence every root of $m$ is radical.
 \end{proof}
+
 
 \end{document}
