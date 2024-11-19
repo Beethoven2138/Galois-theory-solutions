@@ -583,7 +583,13 @@ Let $\mathbb{K},\mathbb{L}$ and $\mathbb{M}$ be subfields of a field $\mathbb{N}
 \end{enumerate}
 \end{exercise}
 
-
+\begin{proof}
+\begin{enumerate}[label=(\roman*)]
+    \item $\mathbb{L}\subseteq\mathbb{L}(\beta)$ and $\mathbb{M}=\mathbb{K}(\beta)\subseteq\mathbb{L}(\beta)$ since $\mathbb{K}\subseteq\mathbb{L}$ so $\mathbb{L}\cup\mathbb{M}\subseteq\mathbb{L}(\beta)$. Now let $\mathbb{I}$ be a subfield of $\mathbb{N}$ containing $\mathbb{L}\cup\mathbb{M}$. $\mathbb{I}$ then contains $\mathbb{L}$ and $\beta$ so $\mathbb{L}(\beta)\subseteq\mathbb{I}$. Thus $\mathbb{L}\mathbb{M}=\mathbb{L}(\beta)$. Then $[\mathbb{L}\mathbb{M}:\mathbb{L}]=[\mathbb{L}(\beta):\mathbb{L}]\leq\text{deg}(m)=[\mathbb{M}:\mathbb{K}]$ where $m$ is the minimal polynomial of $\beta$ over $\mathbb{K}$.
+    \item We proceed by induction on $n$. The base case was covered above. Assume true for $n=k$. For $n=k+1$, we have $\mathbb{M}=\mathbb{K}(\beta_1,...\beta_k)(\beta_{k+1})$, $\mathbb{L}\mathbb{K}(\beta_1,...,\beta_k)=\mathbb{L}(\beta_1,...,\beta_k)$ and $[\mathbb{L}\mathbb{K}(\beta_1,...,\beta_k):\mathbb{L}]\leq[\mathbb{K}(\beta_1,...,\beta_k):\mathbb{K}]$. $\mathbb{L}\mathbb{M}=\mathbb{L}(\mathbb{K}(\beta_1,...,\beta_k)\cup\{\beta_{k+1}\})=(\mathbb{L}\mathbb{K}(\beta_1,...,\beta_k))(\beta_{k+1})=\mathbb{L}(\beta_1,...,\beta_k)(\beta_{k+1})=\mathbb{L}(\beta_1,...,\beta_{k+1})$. Thus $[\mathbb{L}\mathbb{M}:\mathbb{L}]=[\mathbb{L}(\beta_1,...,\beta_{k+1}):\mathbb{L}]=[\mathbb{L}(\beta_1,...,\beta_{k+1}):\mathbb{L}(\beta_1,...,\beta_k)][\mathbb{L}(\beta_1,...,\beta_k):\mathbb{L}]\leq[\mathbb{L}(\beta_1,...,\beta_{k+1}):\mathbb{L}(\beta_1,...,\beta_k)][\mathbb{K}(\beta_1,...,\beta_k):\mathbb{K}]\leq [\mathbb{K}(\beta_1,...,\beta_{k+1}):\mathbb{K}(\beta_1,...,\beta_k)][\mathbb{K}(\beta_1,...,\beta_k):\mathbb{K}]=[\mathbb{K}(\beta_1,...,\beta_{k+1}):\mathbb{K}]=[\mathbb{M}:\mathbb{K}]$ as required.
+    \item If $[\mathbb{M}:\mathbb{K}]=\infty$ then clearly the inequality holds. Otherwise, there are finitely many $\beta_1,...,\beta_n$ algebraic over $\mathbb{K}$ such that $\mathbb{M}=\mathbb{K}(\beta_1,...,\beta_n)$ and so part $(ii)$ applies.
+\end{enumerate}
+\end{proof}
 
 
 I was wondering if an irreducible polynomial having a non-solvable Galois group implies that every root is non-radical. The answer is yes. To prove this, it suffices to prove that if an irreducible polynomial has a radical root, then every root is radical.
