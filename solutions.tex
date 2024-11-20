@@ -591,6 +591,17 @@ Let $\mathbb{K},\mathbb{L}$ and $\mathbb{M}$ be subfields of a field $\mathbb{N}
 \end{enumerate}
 \end{proof}
 
+\begin{exercise}
+Let $F$ be the set of real numbers $z$ such that $z$ is a coordinate of some point in $\mathbb{R}^2$ constructible by ruler and compass from $(0,0)$ and $(1,0)$. ('A coordinate' means either the $x$-coordinate or the $y$-coordinate.) Prove that $F$ is a subfield of $\mathbb{R}$, and, moreover, that $F$ is the smallest subfield of $\mathbb{R}$ with the property that $z^2\in F\implies z\in F$ for all $z\in\mathbb{R}$.
+\end{exercise}
+
+\begin{exercise}
+Let $\mathbb{M}:\mathbb{L}:\mathbb{K}$ be field extensions, with $\mathbb{M}:\mathbb{K}$ finite and normal. Prove that there is a smallest subfield $\mathbb{L}'$ of $\mathbb{M}$ such that $\mathbb{L}\subseteq\mathbb{L}'$ and $\mathbb{L}':\mathbb{K}$ is normal. Here 'smallest' means that $\mathbb{L}'\subseteq\mathbb{L}''$ for any other subfield $\mathbb{L}''$ with the same properties.
+\end{exercise}
+\begin{proof}
+We have that $\mathbb{L}=\mathbb{K}(a_1,...,a_n)$ for $a_1,...,a_n$ algebraic over $\mathbb{K}$. Let $m_1,...,m_n\in\mathbb{K}[x]$ be their minimal polynomials. Then define $\mathbb{L}'$ to be the splitting field of $m_1...m_n$. Clearly $\mathbb{L}\subseteq\mathbb{L}'$, and $\mathbb{L}'\subseteq\mathbb{M}$ since $\mathbb{M}$ is normal and so contains all the roots of all irreducible polynomials over $\mathbb{K}$ with a root in $\mathbb{M}$. $\mathbb{L}'$ is also normal since all splitting fields are normal. Now suppose $\mathbb{L}''$ is another subfield with the same properties. Then $\mathbb{L}''$ will contain $a_1,...,a_n$ and so contain all the roots of $m_1,...,m_n$ and so contain $\mathbb{L}'$.
+\end{proof}
+
 
 I was wondering if an irreducible polynomial having a non-solvable Galois group implies that every root is non-radical. The answer is yes. To prove this, it suffices to prove that if an irreducible polynomial has a radical root, then every root is radical.
 
