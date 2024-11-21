@@ -625,27 +625,35 @@ Let $\mathbb{L}/\mathbb{K}$ be an extension contained in a finite radical extens
 
 
 \begin{exercise}
-Let $\mathbb{M}:\mathbb{K}$ be a field extension. Let $0\neq f\in\mathbb{K}[t]$, and let $\alpha\in\mathbb{M}$ be a root of $f$; then $f(t)=(t-\alpha)g(t)$ for some $g(t)\in\mathbb{K}(\alpha)[t]$. Prove that $\mathbb{M}$ is a splitting field of $g$ over $\mathbb{K}(\alpha)\iff\mathbb{m}$ is a splitting field of $f$ over $\mathbb{K}$.
+Let $\mathbb{M}:\mathbb{K}$ be a field extension. Let $0\neq f\in\mathbb{K}[t]$, and let $\alpha\in\mathbb{M}$ be a root of $f$; then $f(t)=(t-\alpha)g(t)$ for some $g(t)\in\mathbb{K}(\alpha)[t]$. Prove that $\mathbb{M}$ is a splitting field of $g$ over $\mathbb{K}(\alpha)\iff\mathbb{M}$ is a splitting field of $f$ over $\mathbb{K}$.
 \end{exercise}
+\begin{proof}
+$(\implies)$ We have that $\mathbb{M}=\mathbb{K}(\alpha)(a_1,...,a_n)$ where $a_1,...,a_n$ are the roots of $g$. But then $\mathbb{M}=\mathbb{K}(\alpha,a_1,...,a_n)$ where $alpha,a_1,...,a_n$ are the roots of $f$ and so $\mathbb{M}$ is a splitting field of $f$ over $\mathbb{K}$.
+
+$(\impliedby)$ We have that $\mathbb{M}=\mathbb{K}(\alpha,a_1,...,a_n)$ where $a_1,...,a_n$ are the other roots of $f$ and so $\mathbb{M}=\mathbb{K}(\alpha)(a_1,...,a_n)$ where $a_1,...,a_n$ are the roots of $g$.
+\end{proof}
+
+
 
 \begin{exercise}
-Let $\mathbb{K}$ be a field and let $f\in\mathbb{K}[t]$ be an irreducible polynomial.
-\begin{enumerate}[label=(\roman*)]
-    \item Prove that the order of $\text{Gal}_\mathbb{K}(f)$ is divisible by the number of distinct roots of $f$ in its splitting field.
-    \item Deduce that if char $\mathbb{K}=0$ then deg$(f)$ divides $|\text{Gal}_\mathbb{K}(f)|$.
-\end{enumerate}
+Let $\mathbb{M}:\mathbb{K}$ be a finite normal separable field extension. let $H$ be a subgroup of $G=\text{Gal}(\mathbb{M}:\mathbb{K})$. Prove that $H$ is a normal subgroup of $G$ if and only if Fix$(H)$ is a normal extension of $\mathbb{K}$, and that if these conditions hold them $G/H\cong\text{Gal}(\text{Fix}(H):\mathbb{K})$.
 \end{exercise}
-
-\begin{exercise}
-Let $\mathbb{M}:\mathbb{K}$ be a finite normal separable field extension. let $\mathbb{H}$ be a subgroup of $G=\text{Gal}(\mathbb{M}:\mathbb{K})$. Prove that $H$ is a normal subgroup of $G$ if and only if Fix$(H)$ is a normal extension of $\mathbb{K}$, and that if these conditions hold them $G/H\equiv\text{Gal}(\text{Fix}(H):\mathbb{K})$.
-\end{exercise}
+\begin{proof}
+Since $\mathbb{M}:\mathbb{K}$ is a Galois extension, we have that $H=\text{Aut}_\mathbb{L}\mathbb{M}$ for some unique field $\mathbb{L}$ such that $\mathbb{K}\subseteq\mathbb{L}\subseteq\mathbb{M}$. Then by the fundamental theorem of Galois theory, $H=\text{Aut}_\mathbb{L}\mathbb{M}$ is a normal subgroup of $G$ if and only if $\mathbb{L}=\text{Fix}(H)$ is a normal extension, and furthermore $\text{Gal}(\text{Fix}(H):\mathbb{K})=\text{Gal}(\mathbb{L}:\mathbb{K})\cong G/\text{Aut}_\mathbb{L}\mathbb{M}=G/H$.
+\end{proof}
 
 \begin{exercise}
 Prove that every field extension of degree $2$ is normal.
 \end{exercise}
+\begin{proof}
+Let $\mathbb{M}:\mathbb{K}$ be a field extension of degree $2$ and let $a\in\mathbb{M}$ have minimal polynomial $m\in\mathbb{K}[x]$. If $a\in\mathbb{K}$ then everything's fine. Suppose then that $a\not\in\mathbb{K}$. $\mathbb{K}\subseteq\mathbb{K}(a)\subseteq\mathbb{M}$ so $m$ has degree $2$. Write $m$ as $(x-a)(x-b)$ for $b$ in a splitting field of $m$ and suppose that $b\not\in\mathbb{M}$. Then the constant coefficient of $m$ is not in $\mathbb{M}$ and so $m\not\in\mathbb{K}[x]$; a contradiction.
+\end{proof}
 
 \begin{exercise}
 Show that any automorphism of a field $\mathbb{M}$ is an automorphism  over the prime subfield of $\mathbb{M}$.
 \end{exercise}
+\begin{proof}
+Let $\Phi$ be an automorphism over $\mathbb{M}$ and let $\mathbb{F}$ be the prime subfield. We have $\Phi(1_\mathbb{M})=1_\mathbb{M}$ and so $\Phi(m1_\mathbb{M})=m\Phi(1_\mathbb{M})=m1_\mathbb{M}\forall m\in\mathbb{Z}$. Thus $\Phi(\frac{m1_\mathbb{M}}{n1_\mathbb{M}})=\frac{\Phi(m1_\mathbb{M})}{\Phi(n1_\mathbb{M})}=\frac{m1_\mathbb{M}}{n1_\mathbb{M}}\forall m,n\in\mathbb{Z},n\not\in\langle\text{char}(\mathbb{M}) \rangle$ so $\Phi$ fixes $\mathbb{F}$.
+\end{proof}
 
 \end{document}
