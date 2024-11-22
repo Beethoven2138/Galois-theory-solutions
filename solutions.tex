@@ -15,7 +15,7 @@
 \title{Galois Theory Solutions}
 \author{Saxon Supple}
 \date{July 2024}
-
+\usepackage{centernot}
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{definition}[theorem]{Definition}
@@ -655,5 +655,25 @@ Show that any automorphism of a field $\mathbb{M}$ is an automorphism  over the 
 \begin{proof}
 Let $\Phi$ be an automorphism over $\mathbb{M}$ and let $\mathbb{F}$ be the prime subfield. We have $\Phi(1_\mathbb{M})=1_\mathbb{M}$ and so $\Phi(m1_\mathbb{M})=m\Phi(1_\mathbb{M})=m1_\mathbb{M}\forall m\in\mathbb{Z}$. Thus $\Phi(\frac{m1_\mathbb{M}}{n1_\mathbb{M}})=\frac{\Phi(m1_\mathbb{M})}{\Phi(n1_\mathbb{M})}=\frac{m1_\mathbb{M}}{n1_\mathbb{M}}\forall m,n\in\mathbb{Z},n\not\in\langle\text{char}(\mathbb{M}) \rangle$ so $\Phi$ fixes $\mathbb{F}$.
 \end{proof}
+
+\begin{exercise}
+Show by example that for field extensions $\mathbb{M}:\mathbb{L}:\mathbb{K}$, $\mathbb{M}:\mathbb{L}$ and $\mathbb{L}:\mathbb{K}$ normal $\centernot\implies\mathbb{M}:\mathbb{K}$ normal.
+\end{exercise}
+\begin{proof}
+Let $\mathbb{K}=\mathbb{Q}$, $\mathbb{L}=\mathbb{K}(\sqrt{2})$ and $\mathbb{M}=\mathbb{L}(i\sqrt[4]{2})$. $\mathbb{L}:\mathbb{K}$ is normal since $\mathbb{L}$ is a splitting field of $x^2-2$ over $\mathbb{K}$. $\mathbb{M}:\mathbb{L}$ is normal since $\mathbb{M}$ is a splitting field of $x^2+\sqrt{2}$ over $\mathbb{L}$. $i\sqrt[4]{2}$ is a root of $x^4-2$ which is irreducible over $\mathbb{Q}$ by Eisenstein's criterion. For $\mathbb{M}:\mathbb{K}$ to be normal, we must then have $\sqrt[4]{2}\in\mathbb{M}$. Suppose this is the case. Then $\mathbb{Q}\subseteq\mathbb{Q}(\sqrt{2})\subseteq\mathbb{Q}(\sqrt[4]{2})\subseteq\mathbb{Q}(\sqrt{2},i\sqrt[4]{2})=\mathbb{Q}(i\sqrt[4]{2})$. Then by the tower law, $4=[\mathbb{Q}(\sqrt{2},i\sqrt[4]{2}):\mathbb{Q}]=[\mathbb{Q}(\sqrt{2},i\sqrt[4]{2}):\mathbb{Q}(\sqrt[4]{2})][\mathbb{Q}(\sqrt[4]{2}):\mathbb{Q}(\sqrt{2})][\mathbb{Q}(\sqrt{2}):\mathbb{Q}]=2^3=8$; a contradiction. Thus $\mathbb{M}:\mathbb{K}$ is not normal.
+\end{proof}
+
+\begin{exercise}
+\begin{enumerate}[label=(\roman*)]
+    \item Let $\mathbb{K}$ be a field and let $f$ and $g$ be nonzero polynomials over $\mathbb{K}$. Put $\mathbb{L}=SF_\mathbb{K}(g)$. Show that $SF_\mathbb{L}(f)$ and $SF_\mathbb{K}(fg)$ are isomorphic over $\mathbb{K}$.
+    \item Let $f$ and $g$ be nonzero polynomials over $\mathbb{Q}$. Prove that $SF_\mathbb{Q}(fg)$ is the compositum of $SF_\mathbb{Q}(f)$ and $SF_\mathbb{Q}(g)$, where all three splitting fields are viewed as subfields of $\mathbb{C}$.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $0\neq f\in\mathbb{Q}[t]$ with distinct complex roots $\alpha_1,...,\alpha_k$. Prove that $\sum_{i=1}^n\alpha_i^{10}$ is rational.
+\end{exercise}
+
+
 
 \end{document}
