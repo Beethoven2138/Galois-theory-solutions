@@ -678,9 +678,11 @@ Let $\mathbb{K}=\mathbb{Q}$, $\mathbb{L}=\mathbb{K}(\sqrt{2})$ and $\mathbb{M}=\
 \end{exercise}
 
 \begin{exercise}
-Let $0\neq f\in\mathbb{Q}[t]$ with distinct complex roots $\alpha_1,...,\alpha_k$. Prove that $\sum_{i=1}^n\alpha_i^{10}$ is rational.
+Let $0\neq f\in\mathbb{Q}[t]$ with distinct complex roots $\alpha_1,...,\alpha_k$. Prove that $\sum_{i=1}^k\alpha_i^{10}$ is rational.
 \end{exercise}
-
+\begin{proof}
+Let $\phi\in\text{Gal}(SF_\mathbb{Q}(f)/\mathbb{Q})$. $\phi$ permutes the roots so $\phi(\sum_{i=1}^k\alpha_i^{10})=\sum_{i=1}^k\phi(\alpha_i)^{10}=\sum_{i=1}^k\alpha_i^{10}$. Every $\alpha\in SF_\mathbb{Q}(f)\backslash\mathbb{Q}$ has an automorphism in $\text{Gal}(SF_\mathbb{Q}(f)/\mathbb{Q})$ which doesn't fix it so $\sum_{i=1}^k\alpha_i^{10}$ must be rational.
+\end{proof}
 
 
 \end{document}
