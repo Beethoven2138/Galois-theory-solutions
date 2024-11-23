@@ -684,5 +684,37 @@ Let $0\neq f\in\mathbb{Q}[t]$ with distinct complex roots $\alpha_1,...,\alpha_k
 Let $\phi\in\text{Gal}(SF_\mathbb{Q}(f)/\mathbb{Q})$. $\phi$ permutes the roots so $\phi(\sum_{i=1}^k\alpha_i^{10})=\sum_{i=1}^k\phi(\alpha_i)^{10}=\sum_{i=1}^k\alpha_i^{10}$. Every $\alpha\in SF_\mathbb{Q}(f)\backslash\mathbb{Q}$ has an automorphism in $\text{Gal}(SF_\mathbb{Q}(f)/\mathbb{Q})$ which doesn't fix it so $\sum_{i=1}^k\alpha_i^{10}$ must be rational.
 \end{proof}
 
+\begin{exercise}
+Let $\mathbb{L}:\mathbb{K}$ be an algebraic extension. Prove that $\mathbb{L}:\mathbb{K}$ is normal if and only if it has the following property: for every extension $\mathbb{M}:\mathbb{L}$, the field $\mathbb{L}$ is a union of conjugacy classes in $\mathbb{M}$ over $\mathbb{K}$.
+
+(Conjugacy over $\mathbb{K}$ defined an equivalence relation of $\mathbb{M}$, and a 'conjugacy class in $\mathbb{M}$ over $\mathbb{K}$' means an equivalence class of this equivalence relation.)
+\end{exercise}
+\begin{proof}
+$(\implies)$ Let $\mathbb{M}:\mathbb{L}$ be an extension. Let $a\in\mathbb{L}$ and let $b\in\mathbb{M}$ be conjugate to $a$ over $\mathbb{K}$. Then $p(a)=0\iff p(b)=0\forall p\in\mathbb{K}[x]$. Let $f\in\mathbb{K}[x]$ be an irreducible polynomial which has $a$ as a root. Then $b$ is also a root of $f$ and so $b\in\mathbb{L}$ since $\mathbb{L}:\mathbb{K}$ is normal. Thus if $\mathbb{L}$ contains $a$, it contains the whole conjugacy class of $a$ in $\mathbb{M}$ and so $\mathbb{L}$ is a union of conjugacy classes in $\mathbb{M}$ over $\mathbb{K}$.
+
+$(\impliedby)$ Let $a\in\mathbb{L}$ and let $f\in\mathbb{K}[x]$ be an irreducible polynomial with $a$ as a root. Let $b\in\mathbb{M}$ be another root of $f$. Then $\text{Ker}(\text{ev}_a)=\langle f\rangle=\text{Ker}(\text{ev}_b)$ and so $a$ and $b$ are conjugate so are in the same conjugacy class. $\mathbb{L}$ is a union of conjugacy classes in $\mathbb{M}$ so $b\in\mathbb{L}$. Thus $\mathbb{L}:\mathbb{K}$ is normal.
+\end{proof}
+
+
+\begin{exercise}
+Let $f$ be an irreducible cubic over $\mathbb{Q}$. Write $\alpha_1,\alpha_2,\alpha_3$ for the complex roots of $f$, and put\[\delta=(\alpha_1-\alpha_2)(\alpha_1-\alpha_3)(\alpha_2-\alpha_3).\]
+\begin{enumerate}[label=(\roman*)]
+    \item Show that $\text{Gal}_\mathbb{Q}(f)$ is isomorphic to $A_3$ or $S_3$.
+    \item Show that $\delta\neq 0$.
+    \item Show that $\theta(\delta)=\pm\delta$ for all $\theta\in\text{Gal}_\mathbb{Q}(f)$.
+    \item Show that\[G\cong\begin{cases}
+       A_3 &\quad\text{if }\delta\in\mathbb{Q}, \\
+       S_3 &\quad\text{otherwise.} \\ 
+     \end{cases}\]
+     \item Define\[\Delta=\delta^2=(\alpha_1-\alpha_2)^2(\alpha_1-\alpha_3)^2(\alpha_2-\alpha_3)^2.\]It is tedious but straightforward to check that if we write\[B=-(\alpha_1+\alpha_2+\alpha_3),C=\alpha_1\alpha_2+\alpha_1\alpha_3+\alpha_2\alpha_3,D=-\alpha_1\alpha_2\alpha_3\]then\[\Delta=-27D^2+18BCD-4C^3-4B^3D+B^2C^2.\]Which result from Chapter $8$ implies that $\Delta\in\mathbb{Q}$, with zero calculation?
+     \item Deduce that if we write $f(t)$ as $t^3+bt^2+ct+d$ then\[\text{Gal}_\mathbb{Q}(f)\cong\begin{cases}
+       A_3 &\quad\text{if }\sqrt{-27d^2+18bcd-4c^3-4b^3d+b^2c^2}\in\mathbb{Q}, \\
+       S_3 &\quad\text{otherwise.} \\ 
+     \end{cases}\]
+     \item Find the Galois group of $t^3-3t-1$.
+\end{enumerate}
+\end{exercise}
+
+
 
 \end{document}
