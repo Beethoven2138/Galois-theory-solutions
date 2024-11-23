@@ -715,6 +715,16 @@ Let $f$ be an irreducible cubic over $\mathbb{Q}$. Write $\alpha_1,\alpha_2,\alp
 \end{enumerate}
 \end{exercise}
 
+\begin{proof}
+\begin{enumerate}[label=(\roman*)]
+    \item $f$ is irreducible so $[\mathbb{Q}(\alpha_i):\mathbb{Q}]=3\forall i$. Thus $3$ divides $[\mathbb{Q}(\alpha_1,\alpha_2,\alpha_3):\mathbb{Q}]=|\text{Gal}_\mathbb{Q}(f)|$. $\text{Gal}_\mathbb{Q}(f)$ is isomorphic to a subgroup of $S_3$ (Char$(\mathbb{Q})=0$ so $f$ is separable) and the only subgroups of $S_3$ with orders divisible by $3$ are $A_3$ and $S_3$.
+    \item The roots are all distinct so $\delta\neq0$.
+    \item $\theta$ permutes $\alpha_1,\alpha_2,\alpha_3$ so $\theta(\delta)=\pm\delta$.
+    \item If $\delta\in\mathbb{Q}$ then every $\theta\in\text{Gal}_\mathbb{Q}(f)$ fixes $\delta$. The automorphism given by swapping $\alpha_1$ and $\alpha_2$ switches the sign of $\delta$ so $G$ cannot be isomorphic to $S_3$ if $\delta\in\mathbb{Q}$ so must be isomorphic to $A_3$. If $\delta\not\in\mathbb{Q}$ then there must exist a $\theta\in\text{Gal}_\mathbb{Q}(f)$ such that $\theta(\delta)=-\delta$. Every $\theta$ corresponding to an element of $A_3$ fixes $\delta$ so there must be a $\theta$ in the Galois group which doesn't correspond to an element of $A_3$ and so $G\cong S_3$ if $\delta\not\in\mathbb{Q}$.
+    \item $\Delta$ is fixed by every automorphism in the Galois group so $\Delta\in\mathbb{Q}$.
+    \item It's the same condition as asking if $\delta$ is rational.
+\end{enumerate}
+\end{proof}
 
 
 \end{document}
