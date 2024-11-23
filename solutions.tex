@@ -723,8 +723,28 @@ Let $f$ be an irreducible cubic over $\mathbb{Q}$. Write $\alpha_1,\alpha_2,\alp
     \item If $\delta\in\mathbb{Q}$ then every $\theta\in\text{Gal}_\mathbb{Q}(f)$ fixes $\delta$. The automorphism given by swapping $\alpha_1$ and $\alpha_2$ switches the sign of $\delta$ so $G$ cannot be isomorphic to $S_3$ if $\delta\in\mathbb{Q}$ so must be isomorphic to $A_3$. If $\delta\not\in\mathbb{Q}$ then there must exist a $\theta\in\text{Gal}_\mathbb{Q}(f)$ such that $\theta(\delta)=-\delta$. Every $\theta$ corresponding to an element of $A_3$ fixes $\delta$ so there must be a $\theta$ in the Galois group which doesn't correspond to an element of $A_3$ and so $G\cong S_3$ if $\delta\not\in\mathbb{Q}$.
     \item $\Delta$ is fixed by every automorphism in the Galois group so $\Delta\in\mathbb{Q}$.
     \item It's the same condition as asking if $\delta$ is rational.
+    \item $\sqrt{-27-4(-3)^3}=9$ so the Galois group is $A_3$.
 \end{enumerate}
 \end{proof}
+
+\begin{exercise}
+Work through the details of the Galois correspondence for $t^4-2t^2+9\in\mathbb{Q}[t]$.
+\end{exercise}
+
+\begin{exercise}
+Let $p$ be a prime. Prove that $\text{Gal}_\mathbb{Q}(t^p-1)\cong C_{p-1}$.
+\end{exercise}
+
+\begin{exercise}
+\begin{enumerate}[label=(\roman*)]
+    \item Show that when $p$ is prime, $\Phi_p(t)=t^{p-1}+...+t+1$.
+    \item Calculate $\Phi_n$ for $n=1,...,7$.
+    \item By considering $\theta_*\Phi_n$ for $\theta\in\text{Gal}_\mathbb{Q}(t^n-1)$, prove that $\Phi_n\in\mathbb{Q}[t]$.
+    \item Show that $\prod_{d|n}\Phi_d(t)=t^n-1$.
+    \item use Gauss's lemma on primitive polynomials to show that whenever $f,g\in\mathbb{Q}[t]$ are monic polynomials such that $fg\in\mathbb{Z}[t]$, then $f,g\in\mathbb{Z}[t]$.
+    \item Put together the previous parts to conclude that $\Phi_n\in\mathbb{Z}[t]$.
+\end{enumerate}
+\end{exercise}
 
 
 \end{document}
