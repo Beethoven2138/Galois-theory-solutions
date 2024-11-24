@@ -633,6 +633,19 @@ $(\implies)$ We have that $\mathbb{M}=\mathbb{K}(\alpha)(a_1,...,a_n)$ where $a_
 $(\impliedby)$ We have that $\mathbb{M}=\mathbb{K}(\alpha,a_1,...,a_n)$ where $a_1,...,a_n$ are the other roots of $f$ and so $\mathbb{M}=\mathbb{K}(\alpha)(a_1,...,a_n)$ where $a_1,...,a_n$ are the roots of $g$.
 \end{proof}
 
+\begin{exercise}
+Let $\mathbb{K}$ be a field and let $f\in\mathbb{K}[t]$ be an irreducible polynomial.
+\begin{enumerate}[label=(\roman*)]
+    \item Prove that the order of $\text{Gal}_\mathbb{K}(f)$ is divisible by the number of distinct roots of $f$ in its splitting field.
+    \item Deduce that if $\text{Char}(\mathbb{K})=0$ then deg$(f)$ divides $|\text{Gal}_\mathbb{K}(f)|$.
+\end{enumerate}
+\end{exercise}
+\begin{proof}
+\begin{enumerate}[label=(\roman*)]
+    \item let $a_1,...,a_n$ be the distinct roots of $f$. $\text{Gal}_\mathbb{K}(f)$ acts transitively on the roots so $n$ divides the order of $\text{Gal}_\mathbb{K}(f)$ by the orbit-stabilizer theorem.
+    \item $f$ is separable so $\text{deg}(f)=n$.
+\end{enumerate}
+\end{proof}
 
 
 \begin{exercise}
@@ -730,6 +743,9 @@ Let $f$ be an irreducible cubic over $\mathbb{Q}$. Write $\alpha_1,\alpha_2,\alp
 \begin{exercise}
 Work through the details of the Galois correspondence for $t^4-2t^2+9\in\mathbb{Q}[t]$.
 \end{exercise}
+\begin{proof}
+Reduce $f$ mod $3$ to become $\overline{f}=t^4++t^2$
+\end{proof}
 
 \begin{exercise}
 Let $p$ be a prime. Prove that $\text{Gal}_\mathbb{Q}(t^p-1)\cong C_{p-1}$.
