@@ -750,20 +750,35 @@ $t^4-2t^2+9=(t^2+3)^2-8t^2=(t^2+2\sqrt{2}t+3)(t^2-2\sqrt{2}t+3)$. $8-12<0$ and $
 \begin{exercise}
 Let $p$ be a prime. Prove that $\text{Gal}_\mathbb{Q}(t^p-1)\cong C_{p-1}$.
 \end{exercise}
+\begin{proof}
+$SF_\mathbb{Q}(t^p-1)=\mathbb{Q}(\omega)$ where $\omega=e^{\frac{2\pi i}{p}}$ with minimal polynomial $t^{p-1}+...+1$. Thus $|\text{Gal}_\mathbb{Q}(t^p-1)|=p-1$. $\text{Gal}_\mathbb{Q}(t^p-1)$ acts transitively on the roots of $t^{p-1}+...+1$ so there must be $\phi_i\in\text{Gal}_\mathbb{Q}(t^p-1)$ such that $\phi_i(\omega)=\omega^i$ for all $1\leq i\leq p-1$. There are $p-1$ such $\phi_i$ so they comprise the whole Galois group. The Galois group is then clearly isomorphic to $C_{p-1}$.
+\end{proof}
+
 
 \begin{exercise}
 \begin{enumerate}[label=(\roman*)]
     \item Show that when $p$ is prime, $\Phi_p(t)=t^{p-1}+...+t+1$.
-    \item Calculate $\Phi_n$ for $n=1,...,7$.
     \item By considering $\theta_*\Phi_n$ for $\theta\in\text{Gal}_\mathbb{Q}(t^n-1)$, prove that $\Phi_n\in\mathbb{Q}[t]$.
     \item Show that $\prod_{d|n}\Phi_d(t)=t^n-1$.
     \item use Gauss's lemma on primitive polynomials to show that whenever $f,g\in\mathbb{Q}[t]$ are monic polynomials such that $fg\in\mathbb{Z}[t]$, then $f,g\in\mathbb{Z}[t]$.
     \item Put together the previous parts to conclude that $\Phi_n\in\mathbb{Z}[t]$.
 \end{enumerate}
 \end{exercise}
+\begin{proof}
+\begin{enumerate}[label=(\roman*)]
+    \item $\Phi_p(t)$ has roots $e^{\frac{2\pi ik}{p}},0\leq k\leq p-1$. $1=e^{\frac{2\pi i*0}{p}}$ isn't primitive; however every other root is since $k$ is coprime to $p$. Thus $\Phi_p(t)=\frac{t^p-1}{t-1}=t^{p-1}+...+t+1$.
+    \item $\Phi_n=\prod_{\text{gcd}(k,n)=1}(t-\omega^k)$ for $\omega=e^{\frac{2\pi i}{n}}$ so $\theta_*\Phi_n=\prod_{\text{gcd}(k,n)=1}(t-\theta(\omega)^k)=\prod_{\text{gcd}(k,n)=1}(t-\omega^k)=\Phi_n$ since $\theta$ permutes primitive $n$th roots of unity. Thus every $\theta\in\text{Gal}_\mathbb{Q}(t^n-1)$ fixes the coefficients of $\Phi_n$ so $\Phi_n\in\mathbb{Q}[t]$.
+    \item Each root of $t^n-1$ is a primitive $d$th root of unity for some $d|n$ by Lagrange's theorem.
+    \item Let $F,G\in\mathbb{Z}[t]$ be primitive polynomials such that $f,g=\frac{a}{b} F,\frac{c}{d} G$ respectively, for $\frac{a}{b},\frac{c}{d}\in\mathbb{Q}$. $FG$ is primitive by Gauss's lemma and $\frac{ac}{bd}FG\in\mathbb{Z}[t]$ so $\frac{ac}{db}\in\mathbb{Z}$. Furthermore, $\frac{ac}{bd}FG$ is monic so $\frac{ac}{bd}=1$. Thus both $F$ and $G$ are monic so $\frac{a}{b}=\frac{c}{d}=1$. Hence $f,g\in\mathbb{Z}[t]$.
+    \item $\Phi_d$ is monic and $\Phi_d\in\mathbb{Q}[t]\forall d|n$ and $\prod_{d|n}\Phi_d(t)\in\mathbb{Z}[t]$ so each $\Phi_d\in\mathbb{Z}[t]$, including $\Phi_n$.
+\end{enumerate}
+\end{proof}
 
 \begin{exercise}
 Work through the Galois correspondence for $t^3-2$ over $\mathbb{Q}$.
 \end{exercise}
+\begin{proof}
+$t^3-2=(t-\sqrt[3]{2})(t-\sqrt[3]{2}\omega)(t-\sqrt[3]{2}\omega^2)$ where $\omega=e^{\frac{2\pi i}{3}}$ so $SF_\mathbb{Q}(t^3-2)=\mathbb{Q}(\sqrt[3]{2},\sqrt[3]{2}\omega,\sqrt[3]{2}\omega^2)=\mathbb{Q}(\sqrt[3]{2},\omega)$. $\sqrt{-27*4}\not\in\mathbb{Q}$ so $\text{Gal}_\mathbb{Q}(t^3-2)\cong S_3$. $\mathbb{Q}(\omega)$ is the splitting field of $t^3-1$ so $\mathbb{Q}(\omega):\mathbb{Q}$ is normal. $A_3$ is the only normal subgroup of $S_3$ other than $S_3$ and the trivial subgroup so $\text{Aut}_{\mathbb{Q}(\omega)}\mathbb{Q}(\sqrt[3]{2},\omega)\cong A_3$ by the fundamental theorem of Galois theory. We then have $3$ more subfields to find, since $S_3$ has $6$ subgroups. The remaining subgroups of $S_3$ all have order $2$ so $[\mathbb{M}_i:\mathbb{K}]=6/2=3$ for the remaining subfields $\mathbb{M}_i$. One of the remaining subfields is $\mathbb{Q}(\sqrt[3]{2})=\mathbb{Q}(\sqrt[3]{4})$ (since $(2^{\frac{2}{3}})^2=2\sqrt[3]{2}$). We also have a subfield $\mathbb{Q}(\sqrt[3]{2}\omega)=\mathbb{Q}(\sqrt[3]{4}\omega^2)$ and a subfield $\mathbb{Q}(\sqrt[3]{2}\omega^2)$
+\end{proof}
 
 \end{document}
